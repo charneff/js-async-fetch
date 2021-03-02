@@ -2,6 +2,8 @@
 
 * Reminders to touch back on:
   * console.log & debugger: our JS debugging tools
+  * http://latentflip.com/loupe
+  * https://medium.com/jspoint/how-javascript-works-in-browser-and-node-ab7d0d09ac2f
 
 ## Key Topics:
 

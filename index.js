@@ -1,12 +1,17 @@
-const searchInput = document.getElementById('search-input')
-const submitButton = document.getElementById('submit')
-const bookList = document.getElementById('list')
 const baseURL = "https://www.googleapis.com/books/v1/volumes?q="
-//https://www.googleapis.com/books/v1/volumes?q=search+term+here
+const bookList = document.getElementById('list')
 
-submitButton.addEventListener('click', handleSubmit)
+
+document.addEventListener('DOMContentLoaded', () => {
+  const submitButton = document.getElementById('submit')
+  //https://www.googleapis.com/books/v1/volumes?q=search+term+here
+  
+  submitButton.addEventListener('click', handleSubmit)
+})
 
 function handleSubmit(event){
+  bookList.innerHTML = ""
+  const searchInput = document.getElementById('search-input')
   let searchTerm = searchInput.value.split(" ").join("+")
   console.log("Submit Received! Search term is: ", searchTerm)
   if (searchTerm !== ""){
